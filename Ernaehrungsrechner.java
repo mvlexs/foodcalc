@@ -4,25 +4,25 @@ public class Ernaehrungsrechner {
 	/*int alter = Fenster.getAlter();
 	int größe = Fenster.getGröße();
 	int gewicht = Fenster.getGewicht();*/
-	double kaloBedarf;
-	double eiwBedarf;
-	double khBedarf;
-	double fettBedarf;
-	public double kaloZunahme;
-	public double eiwZunahme;
-	public double khZunahme;
-	public double fettZunahme;
+	static double kaloBedarf;
+	static double eiwBedarf;
+	static double khBedarf;
+	static double fettBedarf;
+	static public double kaloZunahme;
+	static public double eiwZunahme;
+	static public double khZunahme;
+	static public double fettZunahme;
 	
 	
 	public Ernaehrungsrechner(int alter, int größe, int gewicht, double kaloBedarf, double eiwBedarf, double khBedarf, double fettBedarf, double kaloZunahme, double eiwZunahme, double khZunahme, double fettZunahme) {
-		this.eiwBedarf = eiwBedarf;
-		this.eiwZunahme = eiwZunahme;
-		this.fettBedarf = fettBedarf;
-		this.fettZunahme = fettZunahme;
-		this.kaloBedarf = kaloBedarf;
-		this.kaloZunahme = kaloZunahme;
-		this.khBedarf =	khBedarf;
-		this.khZunahme = khZunahme;
+		Ernaehrungsrechner.eiwBedarf = eiwBedarf;
+		Ernaehrungsrechner.eiwZunahme = eiwZunahme;
+		Ernaehrungsrechner.fettBedarf = fettBedarf;
+		Ernaehrungsrechner.fettZunahme = fettZunahme;
+		Ernaehrungsrechner.kaloBedarf = kaloBedarf;
+		Ernaehrungsrechner.kaloZunahme = kaloZunahme;
+		Ernaehrungsrechner.khBedarf =	khBedarf;
+		Ernaehrungsrechner.khZunahme = khZunahme;
 		/*this.alter = alter;
 		this.größe = größe;
 		this.gewicht = gewicht;*/
@@ -30,8 +30,8 @@ public class Ernaehrungsrechner {
 	
 	//Ernaehrungsrechner rechner1 = new Ernaehrungsrechner();
 	
-	public double berechneKaloZunahme() {
-		
+	public static double berechneKaloZunahme() {
+		kaloZunahme = Fenster.getHuhn()*160;
 		return kaloZunahme;
 	}
 	

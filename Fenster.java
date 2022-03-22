@@ -27,27 +27,27 @@ public class Fenster extends JFrame {
 	private JTextField alterField;
 	private JTextField größeField;
 	private JTextField gewichtField;
-	private int gewicht;
-	private int größe; 
-	private int alter;
-	private double huhnEinheiten = 0;
-	private double rindEinheiten = 0;
-	private double fischEinheiten = 0;
-	private double wurstEinheiten = 0;
-	private double käseEinheiten = 0;
-	private double butterEinheiten = 0;
-	private double erdnussEinheiten = 0;
-	private double brotEinheiten = 0;
-	private double nudelnEinheiten = 0;
-	private double reisEinheiten = 0;
-	private double haferEinheiten = 0;
-	private double quarkEinheiten = 0;
-	private double milchEinheiten = 0;
-	private double brokkoliEinheiten = 0;
-	private double erbsenEinheiten = 0;
-	private double tofuEinheiten = 0;
+	private static int gewicht;
+	private static int größe; 
+	private static int alter;
+	private static double huhnEinheiten;
+	private static double rindEinheiten;
+	private static double fischEinheiten;
+	private static double wurstEinheiten;
+	private static double käseEinheiten;
+	private static double butterEinheiten;
+	private static double erdnussEinheiten;
+	private static double brotEinheiten;
+	private static double nudelnEinheiten;
+	private static double reisEinheiten;
+	private static double haferEinheiten;
+	private static double quarkEinheiten;
+	private static double milchEinheiten;
+	private static double brokkoliEinheiten;
+	private static double erbsenEinheiten;
+	private static double tofuEinheiten;
 	
-	public Fenster(int alter, int größe, int gewicht, double huhnEinheiten, double rindEinheiten, double fischEinheiten, double wurstEinheiten, double käseEinheiten, double butterEinheiten, double erdnussEinheiten, double brotEinheiten, double nudelnEinheiten, double reisEinheiten, double haferEinheiten, double quarkEinheiten,double milchEinheiten, double brokkoliEinheiten, double erbsenEinheiten, double tofuEinheiten) {
+	/*public Fenster(int alter, int größe, int gewicht, double huhnEinheiten, double rindEinheiten, double fischEinheiten, double wurstEinheiten, double käseEinheiten, double butterEinheiten, double erdnussEinheiten, double brotEinheiten, double nudelnEinheiten, double reisEinheiten, double haferEinheiten, double quarkEinheiten,double milchEinheiten, double brokkoliEinheiten, double erbsenEinheiten, double tofuEinheiten) {
 		 this.gewicht = gewicht;
 		 this.größe = größe;
 		 this.alter = alter;
@@ -67,9 +67,10 @@ public class Fenster extends JFrame {
 		 this.brokkoliEinheiten = brokkoliEinheiten;
 		 this.erbsenEinheiten = erbsenEinheiten;
 		 this.tofuEinheiten = tofuEinheiten;
-	}
-
-	Fenster fensterdaten = new Fenster(gewicht, größe, alter, huhnEinheiten, rindEinheiten, fischEinheiten, wurstEinheiten, käseEinheiten, butterEinheiten, erdnussEinheiten, brotEinheiten, nudelnEinheiten, reisEinheiten, haferEinheiten, quarkEinheiten, milchEinheiten, brokkoliEinheiten, erbsenEinheiten, tofuEinheiten);
+	}*/
+	
+	//wallah ich will kein object machen
+	//private Fenster fensterdaten = new Fenster(gewicht, größe, alter, huhnEinheiten, rindEinheiten, fischEinheiten, wurstEinheiten, käseEinheiten, butterEinheiten, erdnussEinheiten, brotEinheiten, nudelnEinheiten, reisEinheiten, haferEinheiten, quarkEinheiten, milchEinheiten, brokkoliEinheiten, erbsenEinheiten, tofuEinheiten);
 	
 	/**
 	 * Launch the application.
@@ -99,18 +100,7 @@ public class Fenster extends JFrame {
 		contentPane.setLayout(null);
 
 		JButton btnBerechnen = new JButton("Go!");
-		/*
-		 * btnBerechnen.addActionListener(new ActionListener() { public void
-		 * actionPerformed(ActionEvent e) { int gewicht =
-		 * Integer.parseInt(gewichtField.getText());
-		 * 
-		 * int größe = Integer.parseInt(größeField.getText());
-		 * 
-		 * int alter = Integer.parseInt(alterField.getText());
-		 * 
-		 * int huhnEinheiten = huhnSpinner.getValue; } });
-		 */
-
+		
 		btnBerechnen.setBounds(235, 514, 86, 20);
 		contentPane.add(btnBerechnen);
 
@@ -293,7 +283,7 @@ public class Fenster extends JFrame {
 
 				int alter = Integer.parseInt(alterField.getText());*/
 
-				double huhnEinheiten = (Integer) huhnSpinner.getValue();
+				/*double huhnEinheiten = (Integer) huhnSpinner.getValue();
 
 				double rindEinheiten = (Integer) rindSpinner.getValue();
 
@@ -323,178 +313,101 @@ public class Fenster extends JFrame {
 
 				double erbsenEinheiten = (Integer) erbsenSpinner.getValue();
 
-				double tofuEinheiten = (Integer) tofuSpinner.getValue();
-	
+				double tofuEinheiten = (Integer) tofuSpinner.getValue();*/
+				System.out.println(Ernaehrungsrechner.berechneKaloZunahme());
 			}
 				
 			});
 		
 	}	
 		
-		public int getGewicht() {
+		public static int getGewicht() {
 			return gewicht;
 		}
 
-		public int getAlter() {
+		public static int getAlter() {
 			 return alter; 
 		}
 		
-		public int getGröße() {
+		public static int getGröße() {
 			return größe;
 		}
 
-		public double getHuhn() {
+		public static double getHuhn() {
 			return huhnEinheiten;
 		}
 
-		public double getRing() {
+		public static double getRing() {
 			return rindEinheiten;
 		}
 
-		public double getFisch() {
+		public static double getFisch() {
 			return fischEinheiten;
 		}
 
-		public double getWurst() {
+		public static double getWurst() {
 			return wurstEinheiten;
 		}
 
-		public double getKäse() {
+		public static double getKäse() {
 			return käseEinheiten;
 		}
 
-		public double getButter() {
+		public static double getButter() {
 			return butterEinheiten;
 		}
 
-		public double getErdnuss() {
+		public static double getErdnuss() {
 			return erdnussEinheiten;
 		}
 
-		public double getBrot() {
+		public static double getBrot() {
 			return brotEinheiten;
 		}
 
-		public double getNudeln() {
+		public static double getNudeln() {
 			return nudelnEinheiten;
 		}
 
-		public double getReis() {
+		public static double getReis() {
 			return reisEinheiten;
 		}
 
-		public double getHafer() {
+		public static double getHafer() {
 			return haferEinheiten;
 		}
 
-		public double getQuark() {
+		public static double getQuark() {
 			return quarkEinheiten;
 		}
 
-		public double getMilch() {
+		public static double getMilch() {
 			return milchEinheiten;
 		}
 
-		public double getBrokkoli() {
+		public static double getBrokkoli() {
 			return brokkoliEinheiten;
 		}
 
-		public double getErbsen() {
+		public static double getErbsen() {
 			return erbsenEinheiten;
 		}
 
-		public double getTofu() {
+		public static double getTofu() {
 			return tofuEinheiten;
 		}
 		
 		public void setGewicht(double gewicht) {
-			this.gewicht = Integer.parseInt(gewichtField.getText());
+			Fenster.gewicht = Integer.parseInt(gewichtField.getText());
 		}
 		
 		public void setGröße(double größe) {
-			this.größe = Integer.parseInt(größeField.getText());
+			Fenster.größe = Integer.parseInt(größeField.getText());
 		}
 
 		public void setAlter(double alter) {
-			this.alter = Integer.parseInt(alterField.getText());
+			Fenster.alter = Integer.parseInt(alterField.getText());
 		}
-
-		
-	/*public int getGewicht() {
-		return gewicht;
-	}
-
-	public int getAlter() {
-		 return alter; 
-	}
-	
-	public int getGröße() {
-		return größe;
-	}
-
-	public double getHuhn() {
-		return huhnEinheiten;
-	}
-
-	public double getRing() {
-		return rindEinheiten;
-	}
-
-	public double getFisch() {
-		return fischEinheiten;
-	}
-
-	public double getWurst() {
-		return wurstEinheiten;
-	}
-
-	public double getKäse() {
-		return käseEinheiten;
-	}
-
-	public double getButter() {
-		return butterEinheiten;
-	}
-
-	public double getErdnuss() {
-		return erdnussEinheiten;
-	}
-
-	public double getBrot() {
-		return brotEinheiten;
-	}
-
-	public double getNudeln() {
-		return nudelnEinheiten;
-	}
-
-	public double getReis() {
-		return reisEinheiten;
-	}
-
-	public double getHafer() {
-		return haferEinheiten;
-	}
-
-	public double getQuark() {
-		return quarkEinheiten;
-	}
-
-	public double getMilch() {
-		return milchEinheiten;
-	}
-
-	public double getBrokkoli() {
-		return brokkoliEinheiten;
-	}
-
-	public double getErbsen() {
-		return erbsenEinheiten;
-	}
-
-	public double getTofu() {
-		return tofuEinheiten;
-	}*/
 
 	private void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {
